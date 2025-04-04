@@ -43,11 +43,15 @@ public class GetClassInfo {
         Method[] declaredMethods = reflection.getDeclaredMethods();
         Method[] methods = reflection.getMethods();
         for(Method i:declaredMethods){
-            System.out.println("Method Name: " + i.getName());
+            int modifier = i.getModifiers();
+            String mod = Modifier.toString(modifier);
+            System.out.println("Method Name: " + i.getName() + ", " + mod);
         }
         System.out.println();
         for(Method i:methods){
-            System.out.println("Method Name: " + i.getName());
+            int modifier = i.getModifiers();
+            String mod = Modifier.toString(modifier);
+            System.out.println("Method Name: " + i.getName() + ", " + mod);
         }
 
         Constructor[] declaredConstructors = reflection.getDeclaredConstructors();
@@ -63,11 +67,15 @@ public class GetClassInfo {
         Field[] declaredFields = reflection.getDeclaredFields();
         Field[] fields = reflection.getFields();
         for(Field i:declaredFields){
-            System.out.println("Field Name: " + i.getName());
+            int modifier = i.getModifiers();
+            String mod = Modifier.toString(modifier);
+            System.out.println("Field Name: " + i.getName() + ", " + i.getType() + ", " + mod);
         }
         System.out.println();
         for(Field i:fields){
-            System.out.println("Field Name: " + i.getName());
+            int modifier = i.getModifiers();
+            String mod = Modifier.toString(modifier);
+            System.out.println("Field Name: " + i.getName() + ", " + i.getType() + ", " + mod);
         }
 
     }
