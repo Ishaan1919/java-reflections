@@ -35,7 +35,7 @@ public class GenerateJsonRepresentation {
         Field[] field = obj.getDeclaredFields();
 
         for(Field i:field){
-            // get name
+            // get key name
             String name = i.getName();
 
             // get value
